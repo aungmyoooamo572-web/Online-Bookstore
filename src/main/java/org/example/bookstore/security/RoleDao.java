@@ -1,0 +1,10 @@
+package org.example.bookstore.security;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface RoleDao extends JpaRepository<Role, UUID> {
+    Optional<Role> findByRoleName(String roleName);
+}
